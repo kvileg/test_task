@@ -1,0 +1,9 @@
+---
+- name: Set static DNS servers
+  copy:
+    dest: /etc/resolv.conf
+    content: |
+      {% for dns_server in dns_servers %}
+      nameserver {{ dns_server }}
+      {% endfor %}
+  notify: Restart networking service

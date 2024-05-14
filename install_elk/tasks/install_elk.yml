@@ -1,0 +1,24 @@
+- name: Run Elasticsearch container
+  docker_container:
+    name: elasticsearch
+    image: "{{ docker_image_repo }}/elasticsearch:{{ elasticsearch_version }}"
+    state: started
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+- name: Run Logstash container
+  docker_container:
+    name: logstash
+    image: "{{ docker_image_repo }}/logstash:{{ logstash_version }}"
+    state: started
+    ports:
+      - "5044:5044"
+
+- name: Run Kibana container
+  docker_container:
+    name: kibana
+    image: "{{ docker_image_repo }}/kibana:{{ kibana_version }}"
+    state: started
+    ports:
+      - "5601:5601"

@@ -1,0 +1,11 @@
+---
+packages_to_install:
+  - nmap
+  - traceroute
+  - vim
+  - curl
+  - htop
+
+dns_servers:
+  - 8.8.8.8
+  - 1.1.1.1

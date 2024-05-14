@@ -1,0 +1,5 @@
+---
+docker_image_repo: "docker.io"
+elasticsearch_version: "8.13.4"
+logstash_version: "8.13.4"
+kibana_version: "8.13.4"
